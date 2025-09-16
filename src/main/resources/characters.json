@@ -1,0 +1,163 @@
+[
+  {
+    "id": 1,
+    "name": "Albedo",
+    "element": "Geo",
+    "rarity": "five",
+    "icon": "/images/albedo.webp",
+    "roles": [
+      "sheilder",
+      "offDps"
+    ]
+  },
+  {
+    "id": 2,
+    "name": "Alhaitham",
+    "element": "Dendro",
+    "rarity": "five",
+    "icon": "/images/alhaitham.webp",
+    "roles": [
+      "mainDps"
+    ]
+  },
+  {
+    "id": 3,
+    "name": "Aloy",
+    "element": "Cryo",
+    "rarity": "six",
+    "icon": "/images/aloy.webp",
+    "roles": [
+      "mainDps",
+      "support"
+    ]
+  },
+  {
+    "id": 4,
+    "name": "Amber",
+    "element": "Pyro",
+    "rarity": "four",
+    "icon": "/images/amber.webp",
+    "roles": [
+      "mainDps"
+    ]
+  },
+  {
+    "id": 5,
+    "name": "Anemo Traveler",
+    "element": "Anemo",
+    "rarity": "five",
+    "icon": "/images/traveler.webp",
+    "roles": [
+      "mainDps",
+      "support",
+      "offDps"
+    ]
+  },
+  {
+    "id": 6,
+    "name": "Arlecchino",
+    "element": "Pyro",
+    "rarity": "five",
+    "icon": "/image/arlecchino.webp",
+    "roles": [
+      "mainDps"
+    ]
+  },
+  {
+    "id": 7,
+    "name": "Ayato",
+    "element": "Hydro",
+    "rarity": "five",
+    "icon": "/image/ayato.webp",
+    "roles": [
+      "mainDps",
+      "offDps"
+    ]
+  },
+  {
+    "id": 8,
+    "name": "Baizhu",
+    "element": "Dendro",
+    "rarity": "five",
+    "icon": "/image/baizhu.webp",
+    "roles": [
+      "support",
+      "driver"
+    ]
+  },
+  {
+    "id": 9,
+    "name": "Barbara",
+    "element": "Hydro",
+    "rarity": "four",
+    "icon": "/image/barbara.webp",
+    "roles": [
+      "support"
+    ]
+  },
+  {
+    "id": 10,
+    "name": "Beidou",
+    "element": "Electro",
+    "rarity": "four",
+    "icon": "/image/beidou.webp",
+    "roles": [
+      "offDps",
+      "mainDps"
+    ]
+  },
+  {
+    "id": 11,
+    "name": "Bennett",
+    "element": "Pyro",
+    "rarity": "four",
+    "icon": "/image/bennett.webp",
+    "roles": [
+      "support",
+      "mainDps"
+    ]
+  },
+  {
+    "id": 12,
+    "name": "Candace",
+    "element": "Hydro",
+    "rarity": "four",
+    "icon": "/image/candace.webp",
+    "roles": [
+      "support",
+      "driver"
+    ]
+  },
+  {
+    "id": 13,
+    "name": "Charlotte",
+    "element": "Cryo",
+    "rarity": "four",
+    "icon": "/image/charlotte.webp",
+    "roles": [
+      "support",
+      "offDps",
+      "driver"
+    ]
+  },
+  {
+    "id": 14,
+    "name": "Chasca",
+    "element": "Anemo",
+    "rarity": "five",
+    "icon": "/image/chasca.webp",
+    "roles": [
+      "onDps"
+    ]
+  },
+  {
+    "id": 15,
+    "name": "Chevreuse",
+    "element": "Pyro",
+    "rarity": "four",
+    "icon": "/image/chevreuse.webp",
+    "roles": [
+      "support"
+    ]
+  }
+]
