@@ -6,7 +6,7 @@
     "rarity": "five",
     "icon": "/images/albedo.webp",
     "roles": [
-      "sheilder",
+      "shielder",
       "offDps"
     ]
   },
@@ -82,6 +82,8 @@
     "icon": "/image/baizhu.webp",
     "roles": [
       "support",
+      "shielder",
+      "sustain",
       "driver"
     ]
   },
@@ -92,7 +94,7 @@
     "rarity": "four",
     "icon": "/image/barbara.webp",
     "roles": [
-      "support"
+      "sustain"
     ]
   },
   {
@@ -103,7 +105,8 @@
     "icon": "/image/beidou.webp",
     "roles": [
       "offDps",
-      "mainDps"
+      "mainDps",
+      "sheilder"
     ]
   },
   {
@@ -114,6 +117,7 @@
     "icon": "/image/bennett.webp",
     "roles": [
       "support",
+      "sustain",
       "mainDps"
     ]
   },
@@ -135,7 +139,7 @@
     "rarity": "four",
     "icon": "/image/charlotte.webp",
     "roles": [
-      "support",
+      "sustain",
       "offDps",
       "driver"
     ]
@@ -157,7 +161,8 @@
     "rarity": "four",
     "icon": "/image/chevreuse.webp",
     "roles": [
-      "support"
+      "support",
+      "sustain"
     ]
   }
 ]

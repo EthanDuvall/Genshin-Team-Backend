@@ -22,5 +22,19 @@ public class JsonDatabaseService {
         }
     }
 
+    public List<Object> generateTeams(int id) {
+        List<Object> possibleTeams;
+
+        try {
+            InputStream inputStream = JsonDatabaseService.class
+                    .getResourceAsStream("/reactions.json");
+            possibleTeams = mapper.readValue(inputStream, new TypeReference<>() {
+            });
+        } catch (Exception e) {
+            throw new RuntimeException("Failed to read reactions.json", e);
+        }
+        
+        return possibleTeams;
+    }
 
 }

@@ -1,0 +1,90 @@
+{
+  "vape": {
+    "Pyro": [],
+    "Hydro": [],
+    "Flex": []
+  },
+  "overload": {
+    "Pyro": [],
+    "Electro": []
+  },
+  "bloom": {
+    "Hydro": [],
+    "Dendro": [],
+    "Flex": []
+  },
+  "melt": {
+    "Cryo": [],
+    "Pyro": [],
+    "Flex": []
+  },
+  "burning": {
+    "Dendro": [],
+    "Pyro": [],
+    "Flex": []
+  },
+  "electro-charged": {
+    "Electro": [],
+    "Hydro": [],
+    "Flex": []
+  },
+  "lunar-charged": {
+    "Electro": [],
+    "Hydro": [],
+    "Flex": []
+  },
+  "freeze": {
+    "Cryo": [],
+    "Hydro": [],
+    "Flex": []
+  },
+  "quicken": {
+    "Electro": [],
+    "Dendro": [],
+    "Flex": []
+  },
+  "super-conduct": {
+    "Cryo": [],
+    "Electro": [],
+    "Flex": []
+  },
+  "crystallize": {
+    "Geo": [],
+    "Flex": []
+  },
+  "lunar-bloom": {
+    "Hydro": [],
+    "Dendro": [],
+    "Flex": []
+  },
+  "hyper-bloom": {
+    "Hydro": [],
+    "Dendro": [],
+    "Electro": [],
+    "Flex": []
+  },
+  "burgeon": {
+    "Pyro": [],
+    "Dendro": [],
+    "Flex": []
+  },
+  "mono-geo": {
+    "Geo": []
+  },
+  "mono-pyro": {
+    "Pyro": [],
+    "Flex": []
+  },
+  "mono-hydro": {
+    "Pyro": [],
+    "Flex": []
+  },
+  "mono-electro": {
+    "Electro": [],
+    "Flex": []
+  },
+  "mono-cryo": {
+    "Cryo": [],
+    "Flex": []
+  }
+}
