@@ -43,7 +43,7 @@
   },
   {
     "id": 5,
-    "name": "Anemo Traveler",
+    "name": "Traveler (Anemo)",
     "element": "Anemo",
     "rarity": "five",
     "icon": "/images/traveler.webp",
@@ -151,7 +151,7 @@
     "rarity": "five",
     "icon": "/image/chasca.webp",
     "roles": [
-      "onDps"
+      "mainDps"
     ]
   },
   {
@@ -162,6 +162,1021 @@
     "icon": "/image/chevreuse.webp",
     "roles": [
       "support",
+      "sustain"
+    ]
+  },
+  {
+    "id": 16,
+    "name": "Chongyun",
+    "element": "Cryo",
+    "rarity": "four",
+    "icon": "/image/chongyun.webp",
+    "roles": [
+      "offDps",
+      "support"
+    ]
+  },
+  {
+    "id": 17,
+    "name": "Collei",
+    "element": "Dendro",
+    "rarity": "four",
+    "icon": "/image/collei.webp",
+    "roles": [
+      "offDps",
+      "support"
+    ]
+  },
+  {
+    "id": 18,
+    "name": "Cyno",
+    "element": "Electro",
+    "rarity": "five",
+    "icon": "/image/cyno.webp",
+    "roles": [
+      "mainDps"
+    ]
+  },
+  {
+    "id": 19,
+    "name": "Dehya",
+    "element": "Pyro",
+    "rarity": "five",
+    "icon": "/image/dehya.webp",
+    "roles": [
+      "offDps",
+      "shielder",
+      "sustain"
+    ]
+  },
+  {
+    "id": 20,
+    "name": "Diluc",
+    "element": "Pyro",
+    "rarity": "five",
+    "icon": "/image/diluc.webp",
+    "roles": [
+      "mainDps"
+    ]
+  },
+  {
+    "id": 21,
+    "name": "Diona",
+    "element": "Cryo",
+    "rarity": "four",
+    "icon": "/image/diona.webp",
+    "roles": [
+      "sustain",
+      "shielder",
+      "support"
+    ]
+  },
+  {
+    "id": 22,
+    "name": "Dori",
+    "element": "Electro",
+    "rarity": "four",
+    "icon": "/image/dori.webp",
+    "roles": [
+      "sustain",
+      "support"
+    ]
+  },
+  {
+    "id": 23,
+    "name": "Eula",
+    "element": "Cryo",
+    "rarity": "five",
+    "icon": "/image/eula.webp",
+    "roles": [
+      "mainDps"
+    ]
+  },
+  {
+    "id": 24,
+    "name": "Faruzan",
+    "element": "Anemo",
+    "rarity": "four",
+    "icon": "/image/faruzan.webp",
+    "roles": [
+      "support"
+    ]
+  },
+  {
+    "id": 25,
+    "name": "Fischl",
+    "element": "Electro",
+    "rarity": "four",
+    "icon": "/image/fischl.webp",
+    "roles": [
+      "offDps",
+      "support"
+    ]
+  },
+  {
+    "id": 26,
+    "name": "Freminet",
+    "element": "Cryo",
+    "rarity": "four",
+    "icon": "/image/freminet.webp",
+    "roles": [
+      "mainDps"
+    ]
+  },
+  {
+    "id": 27,
+    "name": "Furina",
+    "element": "Hydro",
+    "rarity": "five",
+    "icon": "/image/furina.webp",
+    "roles": [
+      "support",
+      "offDps"
+    ]
+  },
+  {
+    "id": 28,
+    "name": "Gaming",
+    "element": "Pyro",
+    "rarity": "four",
+    "icon": "/image/gaming.webp",
+    "roles": [
+      "mainDps",
+      "driver"
+    ]
+  },
+  {
+    "id": 29,
+    "name": "Ganyu",
+    "element": "Cryo",
+    "rarity": "five",
+    "icon": "/image/ganyu.webp",
+    "roles": [
+      "mainDps",
+      "offDps"
+    ]
+  },
+  {
+    "id": 30,
+    "name": "Gorou",
+    "element": "Geo",
+    "rarity": "four",
+    "icon": "/image/gorou.webp",
+    "roles": [
+      "support"
+    ]
+  },
+  {
+    "id": 31,
+    "name": "Hu Tao",
+    "element": "Pyro",
+    "rarity": "five",
+    "icon": "/image/hutao.webp",
+    "roles": [
+      "mainDps"
+    ]
+  },
+  {
+    "id": 32,
+    "name": "Itto",
+    "element": "Geo",
+    "rarity": "five",
+    "icon": "/image/itto.webp",
+    "roles": [
+      "mainDps"
+    ]
+  },
+  {
+    "id": 33,
+    "name": "Jean",
+    "element": "Anemo",
+    "rarity": "five",
+    "icon": "/image/jean.webp",
+    "roles": [
+      "sustain",
+      "support",
+      "driver"
+    ]
+  },
+  {
+    "id": 34,
+    "name": "Kaeya",
+    "element": "Cryo",
+    "rarity": "four",
+    "icon": "/image/kaeya.webp",
+    "roles": [
+      "offDps",
+      "support",
+      "mainDps"
+    ]
+  },
+  {
+    "id": 35,
+    "name": "Kaveh",
+    "element": "Dendro",
+    "rarity": "four",
+    "icon": "/image/kaveh.webp",
+    "roles": [
+      "mainDps",
+      "driver"
+    ]
+  },
+  {
+    "id": 36,
+    "name": "Kazuha",
+    "element": "Anemo",
+    "rarity": "five",
+    "icon": "/image/kazuha.webp",
+    "roles": [
+      "support"
+    ]
+  },
+  {
+    "id": 37,
+    "name": "Keqing",
+    "element": "Electro",
+    "rarity": "five",
+    "icon": "/image/keqing.webp",
+    "roles": [
+      "mainDps"
+    ]
+  },
+  {
+    "id": 38,
+    "name": "Kirara",
+    "element": "Dendro",
+    "rarity": "four",
+    "icon": "/image/kirara.webp",
+    "roles": [
+      "shielder",
+      "support"
+    ]
+  },
+  {
+    "id": 39,
+    "name": "Klee",
+    "element": "Pyro",
+    "rarity": "five",
+    "icon": "/image/klee.webp",
+    "roles": [
+      "mainDps"
+    ]
+  },
+  {
+    "id": 40,
+    "name": "Kokomi",
+    "element": "Hydro",
+    "rarity": "five",
+    "icon": "/image/kokomi.webp",
+    "roles": [
+      "sustain",
+      "support",
+      "driver"
+    ]
+  },
+  {
+    "id": 41,
+    "name": "Kuki Shinobu",
+    "element": "Electro",
+    "rarity": "four",
+    "icon": "/image/kuki.webp",
+    "roles": [
+      "sustain",
+      "support",
+      "driver"
+    ]
+  },
+  {
+    "id": 42,
+    "name": "Layla",
+    "element": "Cryo",
+    "rarity": "four",
+    "icon": "/image/layla.webp",
+    "roles": [
+      "shielder",
+      "support"
+    ]
+  },
+  {
+    "id": 43,
+    "name": "Lisa",
+    "element": "Electro",
+    "rarity": "four",
+    "icon": "/image/lisa.webp",
+    "roles": [
+      "offDps",
+      "support"
+    ]
+  },
+  {
+    "id": 44,
+    "name": "Lynette",
+    "element": "Anemo",
+    "rarity": "four",
+    "icon": "/image/lynette.webp",
+    "roles": [
+      "support",
+      "offDps",
+      "driver"
+    ]
+  },
+  {
+    "id": 45,
+    "name": "Lyney",
+    "element": "Pyro",
+    "rarity": "five",
+    "icon": "/image/lyney.webp",
+    "roles": [
+      "mainDps"
+    ]
+  },
+  {
+    "id": 46,
+    "name": "Mika",
+    "element": "Cryo",
+    "rarity": "four",
+    "icon": "/image/mika.webp",
+    "roles": [
+      "support",
+      "sustain"
+    ]
+  },
+  {
+    "id": 47,
+    "name": "Mona",
+    "element": "Hydro",
+    "rarity": "five",
+    "icon": "/image/mona.webp",
+    "roles": [
+      "support",
+      "offDps"
+    ]
+  },
+  {
+    "id": 48,
+    "name": "Nahida",
+    "element": "Dendro",
+    "rarity": "five",
+    "icon": "/image/nahida.webp",
+    "roles": [
+      "support",
+      "mainDps",
+      "offDps"
+    ]
+  },
+  {
+    "id": 49,
+    "name": "Navia",
+    "element": "Geo",
+    "rarity": "five",
+    "icon": "/image/navia.webp",
+    "roles": [
+      "mainDps"
+    ]
+  },
+  {
+    "id": 50,
+    "name": "Neuvillette",
+    "element": "Hydro",
+    "rarity": "five",
+    "icon": "/image/neuvillette.webp",
+    "roles": [
+      "mainDps",
+      "driver"
+    ]
+  },
+  {
+    "id": 51,
+    "name": "Nilou",
+    "element": "Hydro",
+    "rarity": "five",
+    "icon": "/image/nilou.webp",
+    "roles": [
+      "support",
+      "driver"
+    ]
+  },
+  {
+    "id": 52,
+    "name": "Ningguang",
+    "element": "Geo",
+    "rarity": "four",
+    "icon": "/image/ningguang.webp",
+    "roles": [
+      "mainDps",
+      "offDps",
+      "support"
+    ]
+  },
+  {
+    "id": 53,
+    "name": "Noelle",
+    "element": "Geo",
+    "rarity": "four",
+    "icon": "/image/noelle.webp",
+    "roles": [
+      "mainDps",
+      "shielder",
+      "sustain"
+    ]
+  },
+  {
+    "id": 54,
+    "name": "Qiqi",
+    "element": "Cryo",
+    "rarity": "five",
+    "icon": "/image/qiqi.webp",
+    "roles": [
+      "sustain",
+      "support"
+    ]
+  },
+  {
+    "id": 55,
+    "name": "Raiden Shogun",
+    "element": "Electro",
+    "rarity": "five",
+    "icon": "/image/raiden.webp",
+    "roles": [
+      "mainDps",
+      "support",
+      "offDps"
+    ]
+  },
+  {
+    "id": 56,
+    "name": "Razor",
+    "element": "Electro",
+    "rarity": "four",
+    "icon": "/image/razor.webp",
+    "roles": [
+      "mainDps"
+    ]
+  },
+  {
+    "id": 57,
+    "name": "Rosaria",
+    "element": "Cryo",
+    "rarity": "four",
+    "icon": "/image/rosaria.webp",
+    "roles": [
+      "offDps",
+      "support"
+    ]
+  },
+  {
+    "id": 58,
+    "name": "Sara",
+    "element": "Electro",
+    "rarity": "four",
+    "icon": "/image/sara.webp",
+    "roles": [
+      "support",
+      "offDps"
+    ]
+  },
+  {
+    "id": 59,
+    "name": "Sayu",
+    "element": "Anemo",
+    "rarity": "four",
+    "icon": "/image/sayu.webp",
+    "roles": [
+      "driver",
+      "sustain",
+      "support"
+    ]
+  },
+  {
+    "id": 60,
+    "name": "Shenhe",
+    "element": "Cryo",
+    "rarity": "five",
+    "icon": "/image/shenhe.webp",
+    "roles": [
+      "support",
+      "offDps"
+    ]
+  },
+  {
+    "id": 61,
+    "name": "Heizou",
+    "element": "Anemo",
+    "rarity": "four",
+    "icon": "/image/heizou.webp",
+    "roles": [
+      "mainDps",
+      "driver",
+      "offDps"
+    ]
+  },
+  {
+    "id": 62,
+    "name": "Sigewinne",
+    "element": "Hydro",
+    "rarity": "five",
+    "icon": "/image/sigewinne.webp",
+    "roles": [
+      "sustain",
+      "support"
+    ]
+  },
+  {
+    "id": 63,
+    "name": "Sucrose",
+    "element": "Anemo",
+    "rarity": "four",
+    "icon": "/image/sucrose.webp",
+    "roles": [
+      "support",
+      "driver"
+    ]
+  },
+  {
+    "id": 64,
+    "name": "Tartaglia",
+    "element": "Hydro",
+    "rarity": "five",
+    "icon": "/image/tartaglia.webp",
+    "roles": [
+      "mainDps",
+      "offDps"
+    ]
+  },
+  {
+    "id": 65,
+    "name": "Thoma",
+    "element": "Pyro",
+    "rarity": "four",
+    "icon": "/image/thoma.webp",
+    "roles": [
+      "shielder",
+      "support",
+      "offDps"
+    ]
+  },
+  {
+    "id": 66,
+    "name": "Tighnari",
+    "element": "Dendro",
+    "rarity": "five",
+    "icon": "/image/tighnari.webp",
+    "roles": [
+      "mainDps",
+      "offDps"
+    ]
+  },
+  {
+    "id": 67,
+    "name": "Traveler (Dendro)",
+    "element": "Dendro",
+    "rarity": "five",
+    "icon": "/image/traveler.webp",
+    "roles": [
+      "support",
+      "offDps"
+    ]
+  },
+  {
+    "id": 68,
+    "name": "Traveler (Geo)",
+    "element": "Geo",
+    "rarity": "five",
+    "icon": "/image/traveler.webp",
+    "roles": [
+      "support",
+      "shielder"
+    ]
+  },
+  {
+    "id": 69,
+    "name": "Traveler (Electro)",
+    "element": "Electro",
+    "rarity": "five",
+    "icon": "/image/traveler.webp",
+    "roles": [
+      "support",
+      "offDps"
+    ]
+  },
+  {
+    "id": 70,
+    "name": "Venti",
+    "element": "Anemo",
+    "rarity": "five",
+    "icon": "/image/venti.webp",
+    "roles": [
+      "support",
+      "offDps"
+    ]
+  },
+  {
+    "id": 71,
+    "name": "Wanderer",
+    "element": "Anemo",
+    "rarity": "five",
+    "icon": "/image/wanderer.webp",
+    "roles": [
+      "mainDps",
+      "driver"
+    ]
+  },
+  {
+    "id": 72,
+    "name": "Wriothesley",
+    "element": "Cryo",
+    "rarity": "five",
+    "icon": "/image/wriothesley.webp",
+    "roles": [
+      "mainDps",
+      "driver"
+    ]
+  },
+  {
+    "id": 73,
+    "name": "Xiangling",
+    "element": "Pyro",
+    "rarity": "four",
+    "icon": "/image/xiangling.webp",
+    "roles": [
+      "offDps",
+      "mainDps",
+      "driver"
+    ]
+  },
+  {
+    "id": 74,
+    "name": "Xiao",
+    "element": "Anemo",
+    "rarity": "five",
+    "icon": "/image/xiao.webp",
+    "roles": [
+      "mainDps"
+    ]
+  },
+  {
+    "id": 75,
+    "name": "Xingqiu",
+    "element": "Hydro",
+    "rarity": "four",
+    "icon": "/image/xingqiu.webp",
+    "roles": [
+      "offDps",
+      "support"
+    ]
+  },
+  {
+    "id": 76,
+    "name": "Xinyan",
+    "element": "Pyro",
+    "rarity": "four",
+    "icon": "/image/xinyan.webp",
+    "roles": [
+      "shielder",
+      "offDps",
+      "support"
+    ]
+  },
+  {
+    "id": 77,
+    "name": "Yaoyao",
+    "element": "Dendro",
+    "rarity": "four",
+    "icon": "/image/yaoyao.webp",
+    "roles": [
+      "sustain",
+      "support",
+      "driver"
+    ]
+  },
+  {
+    "id": 78,
+    "name": "Yanfei",
+    "element": "Pyro",
+    "rarity": "four",
+    "icon": "/image/yanfei.webp",
+    "roles": [
+      "mainDps",
+      "offDps",
+      "support"
+    ]
+  },
+  {
+    "id": 79,
+    "name": "Yae Miko",
+    "element": "Electro",
+    "rarity": "five",
+    "icon": "/image/yaemiko.webp",
+    "roles": [
+      "offDps",
+      "mainDps"
+    ]
+  },
+  {
+    "id": 80,
+    "name": "Yelan",
+    "element": "Hydro",
+    "rarity": "five",
+    "icon": "/image/yelan.webp",
+    "roles": [
+      "offDps",
+      "support"
+    ]
+  },
+  {
+    "id": 81,
+    "name": "Yoimiya",
+    "element": "Pyro",
+    "rarity": "five",
+    "icon": "/image/yoimiya.webp",
+    "roles": [
+      "mainDps"
+    ]
+  },
+  {
+    "id": 82,
+    "name": "Yun Jin",
+    "element": "Geo",
+    "rarity": "four",
+    "icon": "/image/yunjin.webp",
+    "roles": [
+      "support"
+    ]
+  },
+  {
+    "id": 83,
+    "name": "Zhongli",
+    "element": "Geo",
+    "rarity": "five",
+    "icon": "/image/zhongli.webp",
+    "roles": [
+      "shielder",
+      "support"
+    ]
+  },
+  {
+    "id": 84,
+    "name": "Chiori",
+    "element": "Geo",
+    "rarity": "five",
+    "icon": "/image/chiori.webp",
+    "roles": [
+      "offDps",
+      "support"
+    ]
+  },
+  {
+    "id": 85,
+    "name": "Citlali",
+    "element": "Cryo",
+    "rarity": "five",
+    "icon": "/image/citlali.webp",
+    "roles": [
+      "support",
+      "offDps",
+      "shielder"
+    ]
+  },
+  {
+    "id": 86,
+    "name": "Clorinde",
+    "element": "Electro",
+    "rarity": "five",
+    "icon": "/image/clorinde.webp",
+    "roles": [
+      "mainDps"
+    ]
+  },
+  {
+    "id": 87,
+    "name": "Dahlia",
+    "element": "Hydro",
+    "rarity": "four",
+    "icon": "/image/dahlia.webp",
+    "roles": [
+      "support",
+      "shielder"
+    ]
+  },
+  {
+    "id": 88,
+    "name": "Emilie",
+    "element": "Dendro",
+    "rarity": "five",
+    "icon": "/image/emilie.webp",
+    "roles": [
+      "offDps"
+    ]
+  },
+  {
+    "id": 89,
+    "name": "Escoffier",
+    "element": "Cryo",
+    "rarity": "five",
+    "icon": "/image/escoffier.webp",
+    "roles": [
+      "support",
+      "offDps",
+      "sustain"
+    ]
+  },
+  {
+    "id": 90,
+    "name": "Varesa",
+    "element": "Electro",
+    "rarity": "five",
+    "icon": "/image/varesa.webp",
+    "roles": [
+      "mainDps"
+    ]
+  },
+  {
+    "id": 91,
+    "name": "Xianyun",
+    "element": "Anemo",
+    "rarity": "five",
+    "icon": "/image/xianyun.webp",
+    "roles": [
+      "support",
+      "driver",
+      "sustain"
+    ]
+  },
+  {
+    "id": 92,
+    "name": "Xilonen",
+    "element": "Geo",
+    "rarity": "five",
+    "icon": "/image/xilonen.webp",
+    "roles": [
+      "support",
+      "sustain"
+    ]
+  },
+  {
+    "id": 93,
+    "name": "Traveler (Hydro)",
+    "element": "Hydro",
+    "rarity": "five",
+    "icon": "/image/traveler.webp",
+    "roles": [
+      "support",
+      "offDps"
+    ]
+  },
+  {
+    "id": 94,
+    "name": "Iansan",
+    "element": "Electro",
+    "rarity": "four",
+    "icon": "/image/iansan.webp",
+    "roles": [
+      "support"
+    ]
+  },
+  {
+    "id": 95,
+    "name": "Ifa",
+    "element": "Anemo",
+    "rarity": "four",
+    "icon": "/image/ifa.webp",
+    "roles": [
+      "driver"
+    ]
+  },
+  {
+    "id": 96,
+    "name": "Ineffa",
+    "element": "Electro",
+    "rarity": "five",
+    "icon": "/image/ineffa.webp",
+    "roles": [
+      "offDps",
+      "support"
+    ]
+  },
+  {
+    "id": 97,
+    "name": "Kachina",
+    "element": "Geo",
+    "rarity": "four",
+    "icon": "/image/kachina.webp",
+    "roles": [
+      "offDps"
+    ]
+  },
+  {
+    "id": 98,
+    "name": "Kinich",
+    "element": "Dendro",
+    "rarity": "five",
+    "icon": "/image/kinich.webp",
+    "roles": [
+      "mainDps"
+    ]
+  },
+  {
+    "id": 99,
+    "name": "Lan Yan",
+    "element": "Anemo",
+    "rarity": "four",
+    "icon": "/image/lan_yan.webp",
+    "roles": [
+      "support",
+      "shielder"
+    ]
+  },
+  {
+    "id": 100,
+    "name": "Lauma",
+    "element": "Dendro",
+    "rarity": "five",
+    "icon": "/image/lauma.webp",
+    "roles": [
+      "support"
+    ]
+  },
+  {
+    "id": 101,
+    "name": "Mavuika",
+    "element": "Pyro",
+    "rarity": "five",
+    "icon": "/image/mavuika.webp",
+    "roles": [
+      "mainDps"
+    ]
+  },
+  {
+    "id": 102,
+    "name": "Mizuki",
+    "element": "Anemo",
+    "rarity": "five",
+    "icon": "/image/mizuki.webp",
+    "roles": [
+      "mainDps",
+      "offDps"
+    ]
+  },
+  {
+    "id": 103,
+    "name": "Mualani",
+    "element": "Hydro",
+    "rarity": "five",
+    "icon": "/image/mualani.webp",
+    "roles": [
+      "mainDps"
+    ]
+  },
+  {
+    "id": 104,
+    "name": "Ororon",
+    "element": "Electro",
+    "rarity": "four",
+    "icon": "/image/ororon.webp",
+    "roles": [
+      "offDps"
+    ]
+  },
+  {
+    "id": 105,
+    "name": "Traveler (Pyro)",
+    "element": "Pyro",
+    "rarity": "five",
+    "icon": "/image/traveler.webp",
+    "roles": [
+      "support",
+      "offDps"
+    ]
+  },
+  {
+    "id": 106,
+    "name": "Sethos",
+    "element": "Electro",
+    "rarity": "four",
+    "icon": "/image/sethos.webp",
+    "roles": [
+      "mainDps",
+      "offDps"
+    ]
+  },
+  {
+    "id": 107,
+    "name": "Skirk",
+    "element": "Cryo",
+    "rarity": "five",
+    "icon": "/image/skirk.webp",
+    "roles": [
+      "mainDps"
+    ]
+  },
+  {
+    "id": 108,
+    "name": "Aino",
+    "element": "Hydro",
+    "rarity": "four",
+    "icon": "/image/aino.webp",
+    "roles": [
+      "off dps",
       "sustain"
     ]
   }
