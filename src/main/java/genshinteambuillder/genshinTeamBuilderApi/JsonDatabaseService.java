@@ -4,14 +4,18 @@ import com.fasterxml.jackson.core.type.TypeReference;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import org.springframework.stereotype.Service;
 
+import java.io.File;
 import java.io.InputStream;
+import java.util.HashMap;
 import java.util.List;
 
 @Service
 public class JsonDatabaseService {
     private static final ObjectMapper mapper = new ObjectMapper();
+    private static final String FILE_PATH = "ownedCharacters.json";
+    private static final String OWNED_CHAR_FILE = "ownedCharacters.json";
 
-    public List<Character> getCharacters() {
+    public HashMap<String, Character> getCharacters() {
         try {
             InputStream inputStream = JsonDatabaseService.class
                     .getResourceAsStream("/characters.json");
@@ -22,19 +26,38 @@ public class JsonDatabaseService {
         }
     }
 
-    public List<Object> generateTeams(int id) {
-        List<Object> possibleTeams;
-
+    public List<Team> generateTeams(int id) {
         try {
-            InputStream inputStream = JsonDatabaseService.class
-                    .getResourceAsStream("/reactions.json");
-            possibleTeams = mapper.readValue(inputStream, new TypeReference<>() {
-            });
+            ObjectMapper mapper = new ObjectMapper();
+
+            List<Integer> ownedChar = mapper.readValue(
+                    new File("ownedCharacters.json"),
+                    new TypeReference<List<Integer>>() {
+                    }
+            );
+
+            if (ownedChar.size() > 0) {
+                return TeamBuilder.buildTeam(id, ownedChar);
+            } else {
+                throw new RuntimeException("No owned characters");
+            }
         } catch (Exception e) {
-            throw new RuntimeException("Failed to read reactions.json", e);
+            throw new RuntimeException(e);
         }
-        
-        return possibleTeams;
+
+    }
+
+    public void saveOwnedCharacters(List<Integer> ownedCharacters) {
+        ObjectMapper mapper = new ObjectMapper();
+        try {
+            mapper.writerWithDefaultPrettyPrinter()
+                    .writeValue(new File(OWNED_CHAR_FILE), ownedCharacters);
+            System.out.println("Owned characters saved successfully!");
+        } catch (Exception e) {
+            e.printStackTrace();
+            throw new RuntimeException("Could not save owned characters");
+        }
     }
 
 }
+

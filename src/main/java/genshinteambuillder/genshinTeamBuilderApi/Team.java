@@ -12,15 +12,13 @@ public class Team {
         this.members = new HashMap<>();
     }
 
-    public void addMember(String slot, Character character) {
-        members.put(slot, character);
+    public void addMember(String element, Character character) {
+        members.put(element, character);
+
     }
 
-    public Map<String, Character> getMembers() {
-        return members;
+    public boolean hasMember(Character character) {
+        return members.containsValue(character);
     }
 
-    public String getReaction() {
-        return reaction;
-    }
 }

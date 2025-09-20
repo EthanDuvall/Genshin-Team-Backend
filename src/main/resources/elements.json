@@ -1,0 +1,65 @@
+{
+  "Hydro": [
+    "vape",
+    "electro-charged",
+    "lunar-charged",
+    "freeze",
+    "lunar-bloom",
+    "hyper-bloom",
+    "burgeon",
+    "bloom",
+    "mono-hydro"
+  ],
+  "Pyro": [
+    "vape",
+    "overload",
+    "melt",
+    "burning",
+    "mono-pyro"
+  ],
+  "Anemo": [
+    "vape",
+    "overload",
+    "bloom",
+    "melt",
+    "burning",
+    "electro-charged",
+    "lunar-charged",
+    "freeze",
+    "quicken",
+    "super-conduct",
+    "lunar-bloom",
+    "hyper-bloom",
+    "burgeon",
+    "mono-geo",
+    "mono-pyro",
+    "mono-hydro",
+    "mono-electro",
+    "mono-cryo"
+  ],
+  "Cryo": [
+    "melt",
+    "freeze",
+    "super-conduct",
+    "mono-cryo"
+  ],
+  "Geo": [
+    "mono-geo"
+  ],
+  "Dendro": [
+    "lunar-bloom",
+    "hyper-bloom",
+    "burgeon",
+    "bloom",
+    "quicken",
+    "burning"
+  ],
+  "Electro": [
+    "overload",
+    "electro-charged",
+    "lunar-charged",
+    "quicken",
+    "mono-electro",
+    "super-conduct"
+  ]
+}
