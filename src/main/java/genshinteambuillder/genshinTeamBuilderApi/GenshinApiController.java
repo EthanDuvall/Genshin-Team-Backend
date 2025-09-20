@@ -2,6 +2,7 @@ package genshinteambuillder.genshinTeamBuilderApi;
 
 import org.springframework.web.bind.annotation.*;
 
+import java.io.IOException;
 import java.util.HashMap;
 import java.util.List;
 
@@ -22,22 +23,14 @@ public class GenshinApiController {
         return db.getCharacters();
     }
 
-    // GET /genshinBuilder/teams?id=1
-    @GetMapping("/teams")
-    public List<Team> generateTeams(@RequestParam Integer id) {
-        return db.generateTeams(id);
+    // POST /genshinBuilder/generate/teams?id=1
+    @PostMapping("/generate")
+    public List<Team> generateTeams(
+            @RequestBody Integer coreId,
+            @RequestBody List<Integer> ownedCharacters
+    ) throws IOException {
+        return db.generateTeams(coreId, ownedCharacters);
     }
 
-    // POST /genshinBuilder/owned
-    @PostMapping("/owned")
-    public List<Integer> postOwnedCharacters(@RequestBody List<Integer> ownedCharacters) {
-        try {
-            db.saveOwnedCharacters(ownedCharacters);
-            return ownedCharacters;
-        } catch (Exception e) {
-            e.printStackTrace();
-            throw new RuntimeException("Failed to save owned characters");
-        }
-    }
 
 }
