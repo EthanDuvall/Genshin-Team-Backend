@@ -36,10 +36,13 @@ public class TeamBuilder {
         List<String> possibleReactions = elementReaction.get(coreCharacter.getElement());
         for (String reaction : possibleReactions) {
             HashMap<String, List<Integer>> currentReaction = allReactions.get(reaction);
+            System.out.println(currentReaction + "current reaction");
+            System.out.println(coreCharacter + "core");
             if (!currentReaction.get(coreCharacter.getElement()).contains(coreId)) continue;
             Set<String> elementsInReaction = currentReaction.keySet();
 
             for (String role : coreCharacter.getRoles()) {
+
                 Team currentTeam = new Team(reaction);
                 currentTeam.addMember(coreCharacter.getElement(), coreCharacter);
 
