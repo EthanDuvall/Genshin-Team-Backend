@@ -105,7 +105,7 @@
     "roles": [
       "offDps",
       "mainDps",
-      "Sustain"
+      "sustain"
     ]
   },
   "11": {
@@ -573,7 +573,6 @@
     "icon": "/image/noelle.webp",
     "roles": [
       "mainDps",
-      "sustain",
       "sustain"
     ]
   },
@@ -1173,7 +1172,7 @@
     "rarity": "four",
     "icon": "/image/aino.webp",
     "roles": [
-      "off dps",
+      "offDps",
       "sustain"
     ]
   }

@@ -34,75 +34,98 @@ public class TeamBuilder {
         );
 
         List<String> possibleReactions = elementReaction.get(coreCharacter.getElement());
+        if (possibleReactions == null) return generatedTeams; // no reactions possible
+
         for (String reaction : possibleReactions) {
             HashMap<String, List<Integer>> currentReaction = allReactions.get(reaction);
-            System.out.println(currentReaction + "current reaction");
-            System.out.println(coreCharacter + "core");
-            if (!currentReaction.get(coreCharacter.getElement()).contains(coreId)) continue;
+            if (currentReaction == null) continue; // skip if reaction missing in JSON
+
+            List<Integer> coreElementList = currentReaction.get(coreCharacter.getElement());
+            if (coreElementList == null || !coreElementList.contains(coreId)) continue;
+
             Set<String> elementsInReaction = currentReaction.keySet();
 
             for (String role : coreCharacter.getRoles()) {
 
                 Team currentTeam = new Team(reaction);
-                currentTeam.addMember(coreCharacter.getElement(), coreCharacter);
-
-                int teamSize = 1;
+                int teamSize = 0;
                 boolean hasMainDps = role.equals("mainDps");
                 boolean hasSustain = role.equals("sustain");
 
-                while (teamSize < 4) {
-                    for (String element : elementsInReaction) {
-                        if (teamSize >= 4) break;
+                if (elementsInReaction.size() == 2 && elementsInReaction.contains("Flex")) {
+                    String mainElement = elementsInReaction.stream()
+                            .filter(e -> !e.equals("Flex"))
+                            .findFirst()
+                            .orElse(coreCharacter.getElement());
 
-                        int spotsLeft = 4 - teamSize;
-                        int remainingElements = elementsInReaction.size();
-
-                        int maxRoll;
-                        if (remainingElements < spotsLeft) {
-                            maxRoll = spotsLeft;
-                        } else {
-                            if (element.equals(coreCharacter.getElement())) {
-                                maxRoll = 1;
-                            } else {
-                                maxRoll = 2;
-                            }
-                        }
-
-                        int rollCharacters = (int) (Math.random() * (maxRoll + 1));
-
-                        if (elementsInReaction.size() == 1) rollCharacters = spotsLeft;
-
-                        while (rollCharacters > 0 && teamSize < 4) {
-                            List<Integer> rankedCandidates = currentReaction.get(element);
-                            for (int id : rankedCandidates) {
-                                if (ownedCharacters.contains(id)) {
-
-                                    Character candidate = Character.getCharacter(id);
-                                    List<String> candidateRoles = candidate.getRoles();
-                                    System.out.println(candidate);
-                                    if (currentTeam.hasMember(candidate)) {
-                                        continue;
-                                    }
-                                    if (candidateRoles.size() == 1 && candidateRoles.contains("mainDps") && hasMainDps) {
-                                        continue;
-                                    }
-                                    if (candidateRoles.size() == 1 && candidateRoles.contains("sustain") && hasSustain) {
-                                        continue;
-                                    }
-
-                                    if (candidateRoles.contains("mainDps")) hasMainDps = true;
-                                    if (candidateRoles.contains("sustain")) hasSustain = true;
-
-                                    currentTeam.addMember(element, candidate);
-                                    teamSize++;
-                                    rollCharacters--;
-                                    break;
-                                }
-                            }
+                    int added = 0;
+                    List<Integer> mainElementList = currentReaction.get(mainElement);
+                    if (mainElementList != null) {
+                        for (int id : mainElementList) {
+                            if (!ownedCharacters.contains(id)) continue;
+                            Character candidate = Character.getCharacter(id);
+                            if (currentTeam.hasMember(candidate)) continue;
+                            currentTeam.addMember(candidate);
+                            added++;
+                            teamSize++;
+                            if (added == 2) break;
                         }
                     }
+
+                    boolean flexAdded = false;
+                    List<Integer> flexList = currentReaction.get("Flex");
+                    if (flexList != null) {
+                        for (int id : flexList) {
+                            if (!ownedCharacters.contains(id)) continue;
+                            Character candidate = Character.getCharacter(id);
+                            if (currentTeam.hasMember(candidate)) continue;
+                            currentTeam.addMember(candidate);
+                            teamSize++;
+                            flexAdded = true;
+                            break;
+                        }
+                    }
+
+                    if (!flexAdded && teamSize < 3 && mainElementList != null) {
+                        for (int id : mainElementList) {
+                            if (!ownedCharacters.contains(id)) continue;
+                            Character candidate = Character.getCharacter(id);
+                            if (currentTeam.hasMember(candidate)) continue;
+                            currentTeam.addMember(candidate);
+                            teamSize++;
+                            break;
+                        }
+                    }
+
+                } else {
+                    while (teamSize < 3) {
+                        boolean addedThisRound = false;
+                        for (String element : elementsInReaction) {
+                            if (teamSize >= 3) break;
+                            List<Integer> rankedCandidates = currentReaction.get(element);
+                            if (rankedCandidates == null) continue;
+
+                            for (int id : rankedCandidates) {
+                                if (!ownedCharacters.contains(id)) continue;
+                                Character candidate = Character.getCharacter(id);
+                                if (currentTeam.hasMember(candidate)) continue;
+                                List<String> candidateRoles = candidate.getRoles();
+                                if (candidateRoles.contains("mainDps") && hasMainDps) continue;
+                                if (candidateRoles.contains("sustain") && hasSustain) continue;
+
+                                if (candidateRoles.contains("mainDps")) hasMainDps = true;
+                                if (candidateRoles.contains("sustain")) hasSustain = true;
+
+                                currentTeam.addMember(candidate);
+                                teamSize++;
+                                addedThisRound = true;
+                                break;
+                            }
+                        }
+                        if (!addedThisRound) break; // avoid infinite loop if no candidates
+                    }
                 }
-                System.out.println(currentTeam);
+
                 generatedTeams.add(currentTeam);
             }
         }
@@ -110,7 +133,3 @@ public class TeamBuilder {
         return generatedTeams;
     }
 }
-
-
-
-

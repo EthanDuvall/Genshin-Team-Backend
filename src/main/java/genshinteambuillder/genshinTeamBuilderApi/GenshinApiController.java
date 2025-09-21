@@ -5,6 +5,7 @@ import org.springframework.web.bind.annotation.*;
 import java.io.IOException;
 import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 @RestController
 @RequestMapping("/genshinBuilder")
@@ -25,12 +26,10 @@ public class GenshinApiController {
 
     // POST /genshinBuilder/generate/teams?id=1
     @PostMapping("/generate")
-    public List<Team> generateTeams(
-            @RequestBody Integer coreId,
-            @RequestBody List<Integer> ownedCharacters
-    ) throws IOException {
+    public List<Team> generateTeams(@RequestBody Map<String, Object> body) throws IOException {
+        Integer coreId = (Integer) body.get("coreId");
+        List<Integer> ownedCharacters = (List<Integer>) body.get("ownedCharacters");
         return db.generateTeams(coreId, ownedCharacters);
     }
-
 
 }
