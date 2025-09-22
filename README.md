@@ -65,7 +65,7 @@ Content-Type: application/json
 
 {
   "coreId": 1,
-  "ownedCharacters": [1, 2, 3, 4, 5]
+  "ownedCharacters": [1, 31, 36, 75, 85, 36]
 }
 ```
 
@@ -77,35 +77,35 @@ Content-Type: application/json
     "reaction": "Melt",
     "members": {
       "Pyro": {
-        "id": 5,
+        "id": 31,
         "name": "Hu Tao"
       },
       "Hydro": {
-        "id": 6,
-        "name": "Xingqiu"
+        "id": 85,
+        "name": "Citlali"
       },
       "Flex": {
-        "id": 1,
-        "name": "Albedo"
+        "id": 36,
+        "name": "Kazuah"
       }
     }
   },
   {
     "reaction": "Vape",
-    "members": {
-      "Pyro": {
-        "id": 5,
+    "members": [
+      {
+        "id": 31,
         "name": "Hu Tao"
       },
-      "Hydro": {
-        "id": 6,
+      {
+        "id": 75,
         "name": "Xingqiu"
       },
-      "Flex": {
-        "id": 2,
-        "name": "Alhaitham"
+      {
+        "id": 36,
+        "name": "Kazuah"
       }
-    }
+    ]
   }
 ]
 ```
