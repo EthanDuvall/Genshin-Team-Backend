@@ -82,8 +82,7 @@
     "icon": "/image/baizhu.webp",
     "roles": [
       "support",
-      "sustain",
-      "driver"
+      "sustain"
     ]
   },
   "9": {
@@ -127,8 +126,7 @@
     "rarity": "four",
     "icon": "/image/candace.webp",
     "roles": [
-      "support",
-      "driver"
+      "support"
     ]
   },
   "13": {
@@ -139,8 +137,7 @@
     "icon": "/image/charlotte.webp",
     "roles": [
       "sustain",
-      "offDps",
-      "driver"
+      "offDps"
     ]
   },
   "14": {
@@ -298,8 +295,7 @@
     "rarity": "four",
     "icon": "/image/gaming.webp",
     "roles": [
-      "mainDps",
-      "driver"
+      "mainDps"
     ]
   },
   "29": {
@@ -351,8 +347,7 @@
     "icon": "/image/jean.webp",
     "roles": [
       "sustain",
-      "support",
-      "driver"
+      "support"
     ]
   },
   "34": {
@@ -374,8 +369,7 @@
     "rarity": "four",
     "icon": "/image/kaveh.webp",
     "roles": [
-      "mainDps",
-      "driver"
+      "mainDps"
     ]
   },
   "36": {
@@ -427,8 +421,7 @@
     "icon": "/image/kokomi.webp",
     "roles": [
       "sustain",
-      "support",
-      "driver"
+      "support"
     ]
   },
   "41": {
@@ -439,8 +432,7 @@
     "icon": "/image/kuki.webp",
     "roles": [
       "sustain",
-      "support",
-      "driver"
+      "support"
     ]
   },
   "42": {
@@ -473,8 +465,7 @@
     "icon": "/image/lynette.webp",
     "roles": [
       "support",
-      "offDps",
-      "driver"
+      "offDps"
     ]
   },
   "45": {
@@ -538,8 +529,7 @@
     "rarity": "five",
     "icon": "/image/neuvillette.webp",
     "roles": [
-      "mainDps",
-      "driver"
+      "mainDps"
     ]
   },
   "51": {
@@ -549,8 +539,7 @@
     "rarity": "five",
     "icon": "/image/nilou.webp",
     "roles": [
-      "support",
-      "driver"
+      "support"
     ]
   },
   "52": {
@@ -638,7 +627,6 @@
     "rarity": "four",
     "icon": "/image/sayu.webp",
     "roles": [
-      "driver",
       "sustain",
       "support"
     ]
@@ -662,7 +650,6 @@
     "icon": "/image/heizou.webp",
     "roles": [
       "mainDps",
-      "driver",
       "offDps"
     ]
   },
@@ -684,8 +671,7 @@
     "rarity": "four",
     "icon": "/image/sucrose.webp",
     "roles": [
-      "support",
-      "driver"
+      "support"
     ]
   },
   "64": {
@@ -773,8 +759,7 @@
     "rarity": "five",
     "icon": "/image/wanderer.webp",
     "roles": [
-      "mainDps",
-      "driver"
+      "mainDps"
     ]
   },
   "72": {
@@ -784,8 +769,7 @@
     "rarity": "five",
     "icon": "/image/wriothesley.webp",
     "roles": [
-      "mainDps",
-      "driver"
+      "mainDps"
     ]
   },
   "73": {
@@ -796,8 +780,7 @@
     "icon": "/image/xiangling.webp",
     "roles": [
       "offDps",
-      "mainDps",
-      "driver"
+      "mainDps"
     ]
   },
   "74": {
@@ -841,8 +824,7 @@
     "icon": "/image/yaoyao.webp",
     "roles": [
       "sustain",
-      "support",
-      "driver"
+      "support"
     ]
   },
   "78": {
@@ -994,7 +976,6 @@
     "icon": "/image/xianyun.webp",
     "roles": [
       "support",
-      "driver",
       "sustain"
     ]
   },
@@ -1037,7 +1018,7 @@
     "rarity": "four",
     "icon": "/image/ifa.webp",
     "roles": [
-      "driver"
+      "mainDps"
     ]
   },
   "96": {
