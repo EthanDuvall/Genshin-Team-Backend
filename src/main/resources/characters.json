@@ -4,7 +4,7 @@
     "name": "Albedo",
     "element": "Geo",
     "rarity": "five",
-    "icon": "/images/albedo.webp",
+    "icon": "/image/albedo.webp",
     "roles": [
       "sustain",
       "offDps"
@@ -15,7 +15,7 @@
     "name": "Alhaitham",
     "element": "Dendro",
     "rarity": "five",
-    "icon": "/images/alhaitham.webp",
+    "icon": "/image/alhaitham.webp",
     "roles": [
       "mainDps"
     ]
@@ -25,7 +25,7 @@
     "name": "Aloy",
     "element": "Cryo",
     "rarity": "six",
-    "icon": "/images/aloy.webp",
+    "icon": "/image/aloy.webp",
     "roles": [
       "mainDps",
       "support"
@@ -36,7 +36,7 @@
     "name": "Amber",
     "element": "Pyro",
     "rarity": "four",
-    "icon": "/images/amber.webp",
+    "icon": "/image/amber.webp",
     "roles": [
       "mainDps"
     ]
@@ -46,7 +46,7 @@
     "name": "Traveler (Anemo)",
     "element": "Anemo",
     "rarity": "five",
-    "icon": "/images/traveler.webp",
+    "icon": "/image/traveler.webp",
     "roles": [
       "mainDps",
       "support",
@@ -1057,7 +1057,7 @@
     "name": "Lan Yan",
     "element": "Anemo",
     "rarity": "four",
-    "icon": "/image/lan_yan.webp",
+    "icon": "/image/lanyan.webp",
     "roles": [
       "support",
       "sustain"
