@@ -3,7 +3,6 @@ package genshinteambuillder.genshinTeamBuilderApi;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import org.springframework.core.io.ClassPathResource;
 
-import java.io.File;
 import java.util.List;
 import java.util.Map;
 
@@ -18,11 +17,12 @@ public class Character {
     public static Character getCharacter(int id) {
         try {
             ObjectMapper mapper = new ObjectMapper();
-            File file = new ClassPathResource("characters.json").getFile();
+            ClassPathResource resource = new ClassPathResource("characters.json");
             Map<String, Character> characters = mapper.readValue(
-                    file,
+                    resource.getInputStream(),
                     mapper.getTypeFactory().constructMapType(Map.class, String.class, Character.class)
             );
+
             return characters.get(String.valueOf(id));
         } catch (Exception e) {
             throw new RuntimeException(e);

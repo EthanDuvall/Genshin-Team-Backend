@@ -4,7 +4,6 @@ import com.fasterxml.jackson.core.type.TypeReference;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import org.springframework.core.io.ClassPathResource;
 
-import java.io.File;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -19,16 +18,18 @@ public class TeamBuilder {
 
         ObjectMapper mapper = new ObjectMapper();
 
-        File elementsFile = new ClassPathResource("elements.json").getFile();
+
+        ClassPathResource elementsResource = new ClassPathResource("elements.json");
         HashMap<String, List<String>> elementReaction = mapper.readValue(
-                elementsFile,
+                elementsResource.getInputStream(),
                 new TypeReference<HashMap<String, List<String>>>() {
                 }
         );
 
-        File reactionsFile = new ClassPathResource("reactions.json").getFile();
+
+        ClassPathResource reactionsResource = new ClassPathResource("reactions.json");
         HashMap<String, HashMap<String, List<Integer>>> allReactions = mapper.readValue(
-                reactionsFile,
+                reactionsResource.getInputStream(),
                 new TypeReference<HashMap<String, HashMap<String, List<Integer>>>>() {
                 }
         );
