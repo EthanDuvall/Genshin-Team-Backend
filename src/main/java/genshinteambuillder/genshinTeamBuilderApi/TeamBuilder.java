@@ -18,14 +18,12 @@ public class TeamBuilder {
 
         ObjectMapper mapper = new ObjectMapper();
 
-
         ClassPathResource elementsResource = new ClassPathResource("elements.json");
         HashMap<String, List<String>> elementReaction = mapper.readValue(
                 elementsResource.getInputStream(),
                 new TypeReference<HashMap<String, List<String>>>() {
                 }
         );
-
 
         ClassPathResource reactionsResource = new ClassPathResource("reactions.json");
         HashMap<String, HashMap<String, List<Integer>>> allReactions = mapper.readValue(
@@ -45,88 +43,57 @@ public class TeamBuilder {
             if (coreElementList == null || !coreElementList.contains(coreId)) continue;
 
             Set<String> elementsInReaction = currentReaction.keySet();
+            String role = coreCharacter.getRoles().isEmpty() ? "" : coreCharacter.getRoles().get(0);
 
-            for (String role : coreCharacter.getRoles()) {
+            Team currentTeam = new Team(reaction);
+            boolean hasMainDps = role.equals("mainDps");
+            boolean hasSustain = role.equals("sustain");
 
-                Team currentTeam = new Team(reaction);
-                int teamSize = 0;
-                boolean hasMainDps = role.equals("mainDps");
-                boolean hasSustain = role.equals("sustain");
+            // Attempt to add one member per element first
+            for (String element : elementsInReaction) {
+                if (currentTeam.getMembers().size() >= 3) break;
+                List<Integer> candidates = currentReaction.get(element);
+                if (candidates == null) continue;
 
-                if (elementsInReaction.size() == 2 && elementsInReaction.contains("Flex")) {
-                    String mainElement = elementsInReaction.stream()
-                            .filter(e -> !e.equals("Flex"))
-                            .findFirst()
-                            .orElse(coreCharacter.getElement());
+                for (int id : candidates) {
+                    if (id == coreId) continue;
+                    if (!ownedCharacters.contains(id)) continue;
+                    Character candidate = Character.getCharacter(id);
+                    if (currentTeam.hasMember(candidate)) continue;
 
-                    int added = 0;
-                    List<Integer> mainElementList = currentReaction.get(mainElement);
-                    if (mainElementList != null) {
-                        for (int id : mainElementList) {
-                            if (!ownedCharacters.contains(id)) continue;
-                            Character candidate = Character.getCharacter(id);
-                            if (currentTeam.hasMember(candidate)) continue;
-                            currentTeam.addMember(candidate);
-                            added++;
-                            teamSize++;
-                            if (added == 2) break;
-                        }
-                    }
+                    List<String> candidateRoles = candidate.getRoles();
+                    if (candidateRoles.contains("mainDps") && hasMainDps) continue;
+                    if (candidateRoles.contains("sustain") && hasSustain) continue;
 
-                    boolean flexAdded = false;
-                    List<Integer> flexList = currentReaction.get("Flex");
-                    if (flexList != null) {
-                        for (int id : flexList) {
-                            if (!ownedCharacters.contains(id)) continue;
-                            Character candidate = Character.getCharacter(id);
-                            if (currentTeam.hasMember(candidate)) continue;
-                            currentTeam.addMember(candidate);
-                            teamSize++;
-                            flexAdded = true;
-                            break;
-                        }
-                    }
+                    if (candidateRoles.contains("mainDps")) hasMainDps = true;
+                    if (candidateRoles.contains("sustain")) hasSustain = true;
 
-                    if (!flexAdded && teamSize < 3 && mainElementList != null) {
-                        for (int id : mainElementList) {
-                            if (!ownedCharacters.contains(id)) continue;
-                            Character candidate = Character.getCharacter(id);
-                            if (currentTeam.hasMember(candidate)) continue;
-                            currentTeam.addMember(candidate);
-                            teamSize++;
-                            break;
-                        }
-                    }
+                    currentTeam.addMember(candidate);
+                    break; // only one per element for now
+                }
+            }
 
-                } else {
-                    while (teamSize < 3) {
-                        boolean addedThisRound = false;
-                        for (String element : elementsInReaction) {
-                            if (teamSize >= 3) break;
-                            List<Integer> rankedCandidates = currentReaction.get(element);
-                            if (rankedCandidates == null) continue;
+            // If team has less than 3 members, fill with remaining candidates (lower-ranked or repeats)
+            if (currentTeam.getMembers().size() < 3) {
+                for (String element : elementsInReaction) {
+                    if (currentTeam.getMembers().size() >= 3) break;
+                    List<Integer> candidates = currentReaction.get(element);
+                    if (candidates == null) continue;
 
-                            for (int id : rankedCandidates) {
-                                if (!ownedCharacters.contains(id)) continue;
-                                Character candidate = Character.getCharacter(id);
-                                if (currentTeam.hasMember(candidate)) continue;
-                                List<String> candidateRoles = candidate.getRoles();
-                                if (candidateRoles.contains("mainDps") && hasMainDps) continue;
-                                if (candidateRoles.contains("sustain") && hasSustain) continue;
+                    for (int id : candidates) {
+                        if (id == coreId) continue;
+                        if (!ownedCharacters.contains(id)) continue;
+                        Character candidate = Character.getCharacter(id);
+                        if (currentTeam.hasMember(candidate)) continue;
 
-                                if (candidateRoles.contains("mainDps")) hasMainDps = true;
-                                if (candidateRoles.contains("sustain")) hasSustain = true;
-
-                                currentTeam.addMember(candidate);
-                                teamSize++;
-                                addedThisRound = true;
-                                break;
-                            }
-                        }
-                        if (!addedThisRound) break; // avoid infinite loop if no candidates
+                        currentTeam.addMember(candidate);
+                        if (currentTeam.getMembers().size() >= 3) break;
                     }
                 }
+            }
 
+            // Only add complete teams
+            if (currentTeam.getMembers().size() == 3) {
                 generatedTeams.add(currentTeam);
             }
         }

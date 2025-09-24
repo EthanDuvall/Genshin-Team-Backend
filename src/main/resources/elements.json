@@ -2,9 +2,7 @@
   "Hydro": [
     "vape",
     "electro-charged",
-    "lunar-charged",
     "freeze",
-    "lunar-bloom",
     "hyper-bloom",
     "burgeon",
     "bloom",
@@ -18,23 +16,7 @@
     "mono-pyro"
   ],
   "Anemo": [
-    "vape",
-    "overload",
-    "bloom",
-    "melt",
-    "burning",
-    "electro-charged",
-    "lunar-charged",
-    "freeze",
-    "quicken",
-    "super-conduct",
-    "lunar-bloom",
-    "hyper-bloom",
-    "burgeon",
-    "mono-pyro",
-    "mono-hydro",
-    "mono-electro",
-    "mono-cryo"
+    "mono-anemo"
   ],
   "Cryo": [
     "melt",
@@ -46,7 +28,6 @@
     "mono-geo"
   ],
   "Dendro": [
-    "lunar-bloom",
     "hyper-bloom",
     "burgeon",
     "bloom",
@@ -56,7 +37,6 @@
   "Electro": [
     "overload",
     "electro-charged",
-    "lunar-charged",
     "quicken",
     "mono-electro",
     "super-conduct"
